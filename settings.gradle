@@ -1,0 +1,3 @@
+include ':faceTracker'
+include ':app'
+rootProject.name = "Tracker"
