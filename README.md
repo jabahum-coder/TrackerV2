@@ -23,7 +23,7 @@ allprojects {
 
 ```gradle
 dependencies {
-	        implementation 'com.github.jabahum-coder:facetracker:v1.4'
+	        implementation 'com.github.jabahum-coder:trackerv2:v1.0.1'
 	}
 ```
 
