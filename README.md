@@ -1,6 +1,6 @@
-[![Release](https://jitpack.io/v/jabahum-coder/facetracker.svg)](https://jitpack.io/#jabahum-coder/facetracker)
-[![](https://jitci.com/gh/jabahum-coder/facetracker/svg)](https://jitci.com/gh/jabahum-coder/facetracker)
-![GitHub top language](https://img.shields.io/github/languages/top/jabahum-coder/facetracker)
+[![Release](https://jitpack.io/v/jabahum-coder/trackerv2.svg)](https://jitpack.io/#jabahum-coder/trackerv2)
+[![](https://jitci.com/gh/jabahum-coder/trackerv2/svg)](https://jitci.com/gh/jabahum-coder/trackerv2)
+![GitHub top language](https://img.shields.io/github/languages/top/jabahum-coder/trackerv2)
 <a href="https://www.linkedin.com/in/jeremyjabar/">
     <img src="https://img.shields.io/badge/Support-Recommed%2FEndorse%20me%20on%20Linkedin-yellow?style=for-the-badge&logo=linkedin" alt="Recommend me on LinkedIn" /></a>
 
