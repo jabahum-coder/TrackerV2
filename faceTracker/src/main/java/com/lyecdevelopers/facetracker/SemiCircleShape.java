@@ -60,8 +60,8 @@ public class SemiCircleShape extends View {
             rectangle = new RectF(0f + margin, 0f + margin, getWidth() - margin, getHeight() - margin);
         }
         canvas.drawArc(rectangle, -180f, 180f, false, paint);
-        //canvas.drawArc(rectangle, 0f, 60f, false, paint);
-        //canvas.drawArc(rectangle, 180f, -60f, false, paint);
+        canvas.drawArc(rectangle, 0f, 60f, false, paint);
+        canvas.drawArc(rectangle, 180f, -60f, false, paint);
 
         // drawing the curve
        /* curvePaint.setColor(Color.RED);
