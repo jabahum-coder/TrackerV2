@@ -109,21 +109,22 @@ public class FaceTracker extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        int viewWidthHalf = this.getMeasuredWidth() / 2;
-        int viewHeightHalf = this.getMeasuredHeight() / 2;
+        int viewWidthHalf = this.getMeasuredWidth() ;
+        int viewHeightHalf = this.getMeasuredHeight() ;
 
+        Profile.draw(canvas,viewWidthHalf,viewHeightHalf);
 
-        int radius = 0;
-        if (viewWidthHalf > viewHeightHalf)
-            radius = viewHeightHalf - 10;
-        else
-            radius = viewWidthHalf - 10;
+//        int radius = 0;
+//        if (viewWidthHalf > viewHeightHalf)
+//            radius = viewHeightHalf - 10;
+//        else
+//            radius = viewWidthHalf - 10;
 
         // draw circle
-        canvas.drawCircle(viewWidthHalf, viewHeightHalf, radius - 155, circlePaint);
+//        canvas.drawCircle(viewWidthHalf, viewHeightHalf, radius - 155, circlePaint);
 
         // body circle
-        canvas.drawCircle(this.getMeasuredWidth() * .5f, this.getMeasuredHeight() * .96f, radius - 10, bluePaint);
+//        canvas.drawCircle(this.getMeasuredWidth() * .5f, this.getMeasuredHeight() * .96f, radius - 10, bluePaint);
 
         // left ear
         //canvas.drawCircle(getWidth() * .18f, getHeight() * .5f, 100, greenPaint);
@@ -132,7 +133,7 @@ public class FaceTracker extends View {
         //canvas.drawCircle(getWidth() * .82f, getHeight() * .5f, 100, redPaint);
 
         // text
-        canvas.drawText(circleText, this.getMeasuredWidth() * .45f, this.getMeasuredHeight() * .4f, textPaint);
+//        canvas.drawText(circleText, this.getMeasuredWidth() * .45f, this.getMeasuredHeight() * .4f, textPaint);
 
 
     }
