@@ -1,7 +1,5 @@
 package com.lyecdevelopers.facetracker;
 
-// TODO Include your package name here
-
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
@@ -17,7 +15,7 @@ public class Profile {
     private static final Path   t  = new Path();
     private static final Matrix m  = new Matrix();
     private static float od;
-    protected static ColorFilter cf = null;
+    private static ColorFilter cf = null;
 
     /**
      *  IMPORTANT: Due to the static usage of this class this
@@ -41,38 +39,38 @@ public class Profile {
         draw(c, w, h, 0, 0);
     }
 
-    public static void draw(Canvas c, int w, int h, int dx, int dy){
+    public static void draw(Canvas c, int w, int h, int dx, int dy) {
         float ow = 400f;
         float oh = 356f;
 
         od = Math.min(w / ow, h / oh);
 
-        r();
-        c.save();
+        //r();
+        //c.save();
         c.translate((w - od * ow) / 2f + dx, (h - od * oh) / 2f + dy);
-
-        m.reset();
+        //m.reset();
         m.setScale(od, od);
+        //c.save();
 
-        c.save();
-        ps.setColor(Color.argb(0,0,0,0));
+        ps.setColor(Color.argb(0, 0, 0, 0));
         ps.setStrokeCap(Paint.Cap.BUTT);
         ps.setStrokeJoin(Paint.Join.MITER);
-        ps.setStrokeMiter(4.0f*od);
-        c.scale(1.33f,1.33f);
-        c.save();
-        c.restore();
-        r(1,3,0,4);
+        ps.setStrokeMiter(4.0f * od);
+        c.scale(1.33f, 1.33f);
+        //c.save();
+        //c.restore();
+
+        //r(1,3,0,4);
         c.save();
         p.setColor(Color.parseColor("#000000"));
-        c.translate(0.0f,267.0f * od);
-        c.scale(0.05f,-0.05f);
+        c.translate(0.0f, 267.0f * od);
+        c.scale(0.05f, -0.05f);
         c.save();
         t.reset();
-        t.moveTo(2830.0f,5319.0f);
-        t.cubicTo(2157.0f,5254.0f,1480.0f,4478.0f,1480.0f,3772.0f);
-        t.cubicTo(1480.0f,3727.0f,1464.0f,3692.0f,1427.0f,3658.0f);
-        t.cubicTo(1260.0f,3504.0f,1288.0f,3195.0f,1495.0f,2893.0f);
+        t.moveTo(2830.0f, 5319.0f);
+        t.cubicTo(2157.0f, 5254.0f, 1480.0f, 4478.0f, 1480.0f, 3772.0f);
+        t.cubicTo(1480.0f, 3727.0f, 1464.0f, 3692.0f, 1427.0f, 3658.0f);
+        t.cubicTo(1260.0f, 3504.0f, 1288.0f, 3195.0f, 1495.0f, 2893.0f);
         t.cubicTo(1613.0f,2721.0f,1618.0f,2712.0f,1730.0f,2477.0f);
         t.cubicTo(1832.0f,2262.0f,1963.0f,2065.0f,2117.0f,1897.0f);
         t.lineTo(2220.0f,1785.0f);
@@ -101,18 +99,19 @@ public class Profile {
         t.cubicTo(4164.0f,1203.0f,3955.0f,1345.0f,3831.0f,1648.0f);
         t.lineTo(3787.0f,1758.0f);
         t.lineTo(3913.0f,1889.0f);
-        t.cubicTo(4087.0f,2071.0f,4261.0f,2343.0f,4372.0f,2607.0f);
-        t.cubicTo(4423.0f,2730.0f,4501.0f,2888.0f,4543.0f,2960.0f);
-        t.cubicTo(4689.0f,3203.0f,4717.0f,3401.0f,4629.0f,3572.0f);
-        t.cubicTo(4601.0f,3628.0f,4571.0f,3732.0f,4560.0f,3815.0f);
-        t.cubicTo(4473.0f,4483.0f,4080.0f,5027.0f,3529.0f,5242.0f);
-        t.cubicTo(3337.0f,5318.0f,3092.0f,5344.0f,2830.0f,5319.0f);
-
+        t.cubicTo(4087.0f, 2071.0f, 4261.0f, 2343.0f, 4372.0f, 2607.0f);
+        t.cubicTo(4423.0f, 2730.0f, 4501.0f, 2888.0f, 4543.0f, 2960.0f);
+        t.cubicTo(4689.0f, 3203.0f, 4717.0f, 3401.0f, 4629.0f, 3572.0f);
+        t.cubicTo(4601.0f, 3628.0f, 4571.0f, 3732.0f, 4560.0f, 3815.0f);
+        t.cubicTo(4473.0f, 4483.0f, 4080.0f, 5027.0f, 3529.0f, 5242.0f);
+        t.cubicTo(3337.0f, 5318.0f, 3092.0f, 5344.0f, 2830.0f, 5319.0f);
         t.transform(m);
         c.drawPath(t, p);
         c.drawPath(t, ps);
         c.restore();
-        r(1,3,0,4,2);
+
+
+        /*r(1,3,0,4,2);
         c.save();
         t.reset();
         t.moveTo(4949.0f,5208.0f);
@@ -122,12 +121,13 @@ public class Profile {
         t.cubicTo(5065.0f,5204.0f,5063.0f,5201.0f,5029.0f,5200.0f);
         t.cubicTo(5006.0f,5200.0f,4978.0f,5210.0f,4965.0f,5223.0f);
         t.cubicTo(4949.0f,5239.0f,4944.0f,5236.0f,4949.0f,5208.0f);
-
         t.transform(m);
         c.drawPath(t, p);
         c.drawPath(t, ps);
-        c.restore();
-        r(1,3,0,4,2);
+        c.restore();*/
+
+
+       /* r(1,3,0,4,2);
         c.save();
         t.reset();
         t.moveTo(5944.0f,5129.0f);
@@ -137,19 +137,19 @@ public class Profile {
         t.cubicTo(5933.0f,5033.0f,5943.0f,5060.0f,5969.0f,5087.0f);
         t.cubicTo(5995.0f,5113.0f,5995.0f,5118.0f,5965.0f,5129.0f);
         t.cubicTo(5946.0f,5136.0f,5937.0f,5136.0f,5944.0f,5129.0f);
-
         t.transform(m);
         c.drawPath(t, p);
         c.drawPath(t, ps);
-        c.restore();
-        r(1,3,0,4,2);
+        c.restore();*/
+
+
+       /* r(1,3,0,4,2);
         c.restore();
         r(1,3,0,4);
         p.setColor(Color.parseColor("#000000"));
         c.restore();
         r();
-
-        c.restore();
+        c.restore();*/
     }
 
     private static void r(Integer... o){
@@ -173,4 +173,4 @@ public class Profile {
             }
         }
     }
-};
+}

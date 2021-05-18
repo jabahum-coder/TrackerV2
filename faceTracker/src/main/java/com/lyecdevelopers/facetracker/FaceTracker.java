@@ -32,15 +32,21 @@ public class FaceTracker extends View {
 
     private Paint paint;
 
-
     public FaceTracker(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setWillNotDraw(false);
     }
 
     public FaceTracker(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         setUpAttributes(attrs);
+        setWillNotDraw(false);
         setupPaint();
+    }
+
+    @Override
+    public void setWillNotDraw(boolean willNotDraw) {
+        super.setWillNotDraw(false);
     }
 
     // Setup paint with color and stroke styles
@@ -101,19 +107,22 @@ public class FaceTracker extends View {
 
 
         margin = 10f;
-
-
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        int viewWidthHalf = this.getMeasuredWidth() ;
-        int viewHeightHalf = this.getMeasuredHeight() ;
+        int viewWidthHalf = this.getMeasuredWidth();
+        int viewHeightHalf = this.getMeasuredHeight();
 
         Profile.draw(canvas, viewWidthHalf, viewHeightHalf);
         Profile.setColorTint(circleCol);
+        Profile.clearColorTint(circleCol);
+
+        // SvgObject.draw(canvas,viewWidthHalf,viewHeightHalf);
+        //SvgObject.setColorTint(circleCol);
+
 
 //        int radius = 0;
 //        if (viewWidthHalf > viewHeightHalf)
@@ -134,7 +143,7 @@ public class FaceTracker extends View {
         //canvas.drawCircle(getWidth() * .82f, getHeight() * .5f, 100, redPaint);
 
         // text
-        //canvas.drawText(circleText, this.getMeasuredWidth() * .45f, this.getMeasuredHeight() * .4f, textPaint);
+        canvas.drawText(circleText, this.getMeasuredWidth() * .45f, this.getMeasuredHeight() * .4f, textPaint);
 
 
     }
