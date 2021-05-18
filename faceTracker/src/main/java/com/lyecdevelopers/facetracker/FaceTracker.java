@@ -112,7 +112,8 @@ public class FaceTracker extends View {
         int viewWidthHalf = this.getMeasuredWidth() ;
         int viewHeightHalf = this.getMeasuredHeight() ;
 
-        Profile.draw(canvas,viewWidthHalf,viewHeightHalf);
+        Profile.draw(canvas, viewWidthHalf, viewHeightHalf);
+        Profile.setColorTint(circleCol);
 
 //        int radius = 0;
 //        if (viewWidthHalf > viewHeightHalf)
@@ -133,7 +134,7 @@ public class FaceTracker extends View {
         //canvas.drawCircle(getWidth() * .82f, getHeight() * .5f, 100, redPaint);
 
         // text
-//        canvas.drawText(circleText, this.getMeasuredWidth() * .45f, this.getMeasuredHeight() * .4f, textPaint);
+        //canvas.drawText(circleText, this.getMeasuredWidth() * .45f, this.getMeasuredHeight() * .4f, textPaint);
 
 
     }

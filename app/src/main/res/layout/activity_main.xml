@@ -7,15 +7,16 @@
     tools:context=".MainActivity">
 
     <com.lyecdevelopers.facetracker.FaceTracker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:circleColor="@color/black"
         app:circleLabel="36.0"
         app:labelColor="@color/white" />
 
     <com.lyecdevelopers.facetracker.SemiCircleShape
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
 
 </FrameLayout>
