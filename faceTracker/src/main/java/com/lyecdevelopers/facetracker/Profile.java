@@ -41,40 +41,43 @@ public class Profile {
 
     public static void draw(Canvas c, int w, int h, int dx, int dy) {
         float ow = 400f;
-        float oh = 356f;
+        float oh = 350f;
 
         od = Math.min(w / ow, h / oh);
 
-        //r();
-        //c.save();
+        r();
+        c.save();
         c.translate((w - od * ow) / 2f + dx, (h - od * oh) / 2f + dy);
-        //m.reset();
+        m.reset();
         m.setScale(od, od);
-        //c.save();
+        c.save();
 
         ps.setColor(Color.argb(0, 0, 0, 0));
         ps.setStrokeCap(Paint.Cap.BUTT);
         ps.setStrokeJoin(Paint.Join.MITER);
         ps.setStrokeMiter(4.0f * od);
         c.scale(1.33f, 1.33f);
-        //c.save();
-        //c.restore();
-
-        //r(1,3,0,4);
         c.save();
+        c.restore();
+
+
+        c.save();
+        c.restore();
         p.setColor(Color.parseColor("#000000"));
         c.translate(0.0f, 267.0f * od);
         c.scale(0.05f, -0.05f);
+
+        r(1, 3, 0, 4, 2);
         c.save();
         t.reset();
         t.moveTo(2830.0f, 5319.0f);
         t.cubicTo(2157.0f, 5254.0f, 1480.0f, 4478.0f, 1480.0f, 3772.0f);
         t.cubicTo(1480.0f, 3727.0f, 1464.0f, 3692.0f, 1427.0f, 3658.0f);
         t.cubicTo(1260.0f, 3504.0f, 1288.0f, 3195.0f, 1495.0f, 2893.0f);
-        t.cubicTo(1613.0f,2721.0f,1618.0f,2712.0f,1730.0f,2477.0f);
-        t.cubicTo(1832.0f,2262.0f,1963.0f,2065.0f,2117.0f,1897.0f);
-        t.lineTo(2220.0f,1785.0f);
-        t.lineTo(2149.0f,1644.0f);
+        t.cubicTo(1613.0f, 2721.0f, 1618.0f, 2712.0f, 1730.0f, 2477.0f);
+        t.cubicTo(1832.0f, 2262.0f, 1963.0f, 2065.0f, 2117.0f, 1897.0f);
+        t.lineTo(2220.0f, 1785.0f);
+        t.lineTo(2149.0f, 1644.0f);
         t.cubicTo(2012.0f,1369.0f,1795.0f,1226.0f,1340.0f,1109.0f);
         t.cubicTo(559.0f,909.0f,114.0f,572.0f,30.0f,117.0f);
         t.cubicTo(0.0f,-44.0f,157.0f,-36.0f,209.0f,126.0f);

@@ -8,13 +8,15 @@
     tools:context=".MainActivity">
 
     <com.lyecdevelopers.facetracker.FaceTracker
+        android:layout_width="500dp"
+        android:layout_height="500dp"
         android:id="@+id/faceTracker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:circleColor="@color/black"
-        app:circleLabel="36.0"
         app:labelColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:circleColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:circleLabel="36.0"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
